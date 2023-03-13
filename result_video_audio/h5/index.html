@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./MekongJS.js"></script>
+</head>
+<body>
+    指定图片+音频合成视频，并返回视频链接
+    </br>
+    <button class="submit" onclick="submit()">Generate Video</button>
+
+    <script>
+    function submit(){        
+        var params = {
+            "postType": "generalPost", // eneralPost, post, preview
+            "taskType": "video",  //image, video, audio, text
+            "fn_name": "testMedia",
+            "param": {
+                "image":"https://cdn.pixabay.com/photo/2014/12/16/22/25/woman-570883_960_720.jpg",
+                "audio":"https://www.ccf.org.cn/upload/resources/audio/2017/09/05/36708.mp3", 
+                "duration": "10"
+            }
+        };
+
+        MekongJS.excuting(params, function(res) { console.log(res); });
+    }
+    </script>
+</body>
+</html>

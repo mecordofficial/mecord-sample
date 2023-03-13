@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./MekongJS.js"></script>
+</head>
+<body>
+    这是一个文本测试demo，输入一个视频链接，返回视频的信息
+    </br>
+    <button class="submit" onclick="submit()">Get Video Info</button>
+
+    <script>
+    function submit(){
+        var params = {
+            "postType": "generalPost", // eneralPost, post, preview
+            "taskType": "text",  //image, video, audio, text
+            "fn_name": "testText",
+            "param": {
+                "url":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+            }
+        };
+
+        MekongJS.excuting(params, function(res) { console.log(res); });
+    }
+    </script>
+</body>
+</html>

@@ -54,7 +54,7 @@ def runTask(data):
             "content": [ 
                 url
             ],
-            "extention" : {
+            "extension" : {
                 "info": "",
                 "cover_url": ""
             }

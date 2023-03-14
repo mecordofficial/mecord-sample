@@ -18,7 +18,7 @@ def successResult(txt1, txt2):
                         txt1,
                         txt2
                     ],
-                    "extention" : {
+                    "extension" : {
                         "info": "",
                         "cover_url": ""
                     }
